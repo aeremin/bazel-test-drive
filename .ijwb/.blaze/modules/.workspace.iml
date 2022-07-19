@@ -22,6 +22,7 @@
     <orderEntry type="library" name="ktor-utils-jvm-2.0.3_c4a5a876" level="project" />
     <orderEntry type="library" name="ktor-server-core-jvm-2.0.3_8795d6ae" level="project" />
     <orderEntry type="library" name="kotlinx-coroutines-core-jvm-1.6.4_ab3854b4" level="project" />
+    <orderEntry type="library" name="junit-4.12_a45d20f2" level="project" />
     <orderEntry type="library" name="ktor-server-host-common-jvm-2.0.3_9cbca183" level="project" />
     <orderEntry type="library" name="libktor_ea1e96c3" level="project" />
     <orderEntry type="library" name="ktor-http-jvm-2.0.3_cffee65" level="project" />

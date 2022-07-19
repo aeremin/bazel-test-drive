@@ -23,6 +23,7 @@ kt_jvm_test(
     test_class = "com.example.ExampleTest",
     deps = [
         artifact("junit:junit"),
+        ":greeter"
     ],
 )
 
