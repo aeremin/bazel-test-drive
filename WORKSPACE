@@ -33,6 +33,16 @@ rules_jvm_external_setup()
 load("@rules_jvm_external//:defs.bzl", "maven_install")
 maven_install(
     artifacts = [
+        "org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.7.10",
+
+        "org.jetbrains.kotlinx:kotlinx-coroutines-core-jvm:1.6.4",
+
+        "io.ktor:ktor-server-core-jvm:2.0.3",
+        "io.ktor:ktor-server-netty-jvm:2.0.3",
+        "io.ktor:ktor-server-host-common-jvm:2.0.3",
+        "io.ktor:ktor-http-jvm:2.0.3",
+        "io.ktor:ktor-utils-jvm:2.0.3",
+
         "junit:junit:4.12",
     ],
     repositories = [
