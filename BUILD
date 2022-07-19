@@ -1,4 +1,5 @@
 load("//:kotlin.bzl", "kt_jvm_binary", "kt_jvm_test")
+load("@rules_jvm_external//:defs.bzl", "artifact")
 
 java_library(
     name = "greeter",
@@ -21,7 +22,7 @@ kt_jvm_test(
     ],
     test_class = "com.example.ExampleTest",
     deps = [
-        "@maven//:junit_junit",
+        artifact("junit:junit"),
     ],
 )
 
