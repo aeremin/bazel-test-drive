@@ -1,0 +1,15 @@
+load("@io_bazel_rules_kotlin//kotlin:jvm.bzl", "kt_jvm_library")
+load("@rules_jvm_external//:defs.bzl", "artifact")
+
+java_library(
+    name = "ktor",
+    exports = [
+        artifact("io.ktor:ktor-server-netty-jvm"),
+        artifact("io.ktor:ktor-server-core-jvm"),
+        artifact("io.ktor:ktor-server-host-common-jvm"),
+        artifact("io.ktor:ktor-http-jvm"),
+        artifact("io.ktor:ktor-utils-jvm"),
+        artifact("org.jetbrains.kotlinx:kotlinx-coroutines-core-jvm"),
+     ],
+     visibility = ["//visibility:public"],
+)

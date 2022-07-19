@@ -1,5 +1,4 @@
 load("//:kotlin.bzl", "kt_jvm_binary", "kt_jvm_test")
-load("@rules_jvm_external//:defs.bzl", "artifact")
 
 java_library(
     name = "greeter",
@@ -30,12 +29,7 @@ kt_jvm_binary(
     name = "server",
     srcs = ["Server.kt"],
     deps = [
-        artifact("io.ktor:ktor-server-netty-jvm"),
-        artifact("io.ktor:ktor-server-core-jvm"),
-        artifact("io.ktor:ktor-server-host-common-jvm"),
-        artifact("io.ktor:ktor-http-jvm"),
-        artifact("io.ktor:ktor-utils-jvm"),
-        artifact("org.jetbrains.kotlinx:kotlinx-coroutines-core-jvm"),
+        "//third_party:ktor"
      ],
     main_class = "com.example.ServerKt"
 )
