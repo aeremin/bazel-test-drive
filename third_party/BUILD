@@ -2,6 +2,7 @@ load("@rules_jvm_external//:defs.bzl", "artifact")
 
 java_library(
     name = "ktor",
+    visibility = ["//visibility:public"],
     exports = [
         artifact("io.ktor:ktor-server-netty-jvm"),
         artifact("io.ktor:ktor-server-core-jvm"),
@@ -9,6 +10,5 @@ java_library(
         artifact("io.ktor:ktor-http-jvm"),
         artifact("io.ktor:ktor-utils-jvm"),
         artifact("org.jetbrains.kotlinx:kotlinx-coroutines-core-jvm"),
-     ],
-     visibility = ["//visibility:public"],
+    ],
 )

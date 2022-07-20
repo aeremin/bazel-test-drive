@@ -9,10 +9,10 @@ java_library(
 kt_jvm_binary(
     name = "example",
     srcs = ["Example.kt"],
+    main_class = "com.example.ExampleKt",
     deps = [
-        ":greeter"
+        ":greeter",
     ],
-    main_class = "com.example.ExampleKt"
 )
 
 kt_jvm_test(
@@ -23,15 +23,15 @@ kt_jvm_test(
     test_class = "com.example.ExampleTest",
     deps = [
         artifact("junit:junit"),
-        ":greeter"
+        ":greeter",
     ],
 )
 
 kt_jvm_binary(
     name = "server",
     srcs = ["Server.kt"],
+    main_class = "com.example.ServerKt",
     deps = [
-        "//third_party:ktor"
-     ],
-    main_class = "com.example.ServerKt"
+        "//third_party:ktor",
+    ],
 )
