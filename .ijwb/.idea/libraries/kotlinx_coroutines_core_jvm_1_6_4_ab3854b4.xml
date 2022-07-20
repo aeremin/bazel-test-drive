@@ -1,9 +1,0 @@
-<component name="libraryTable">
-  <library name="kotlinx-coroutines-core-jvm-1.6.4_ab3854b4">
-    <CLASSES>
-      <root url="jar://$USER_HOME$/_bazel_alexey/w3xqhprh/execroot/__main__/external/maven/v1/https/repo1.maven.org/maven2/org/jetbrains/kotlinx/kotlinx-coroutines-core-jvm/1.6.4/kotlinx-coroutines-core-jvm-1.6.4.jar!/" />
-    </CLASSES>
-    <JAVADOC />
-    <SOURCES />
-  </library>
-</component>

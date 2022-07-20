@@ -1,9 +1,0 @@
-<component name="libraryTable">
-  <library name="ktor-server-netty-jvm-2.0.3_429edfb5">
-    <CLASSES>
-      <root url="jar://$USER_HOME$/_bazel_alexey/w3xqhprh/execroot/__main__/external/maven/v1/https/repo1.maven.org/maven2/io/ktor/ktor-server-netty-jvm/2.0.3/ktor-server-netty-jvm-2.0.3.jar!/" />
-    </CLASSES>
-    <JAVADOC />
-    <SOURCES />
-  </library>
-</component>
