@@ -49,6 +49,7 @@ maven_install(
         "io.ktor:ktor-http-jvm:2.0.3",
         "io.ktor:ktor-utils-jvm:2.0.3",
         "junit:junit:4.12",
+        "io.kotest:kotest-assertions-core-jvm:5.3.2",
     ],
     repositories = [
         "https://maven.google.com",

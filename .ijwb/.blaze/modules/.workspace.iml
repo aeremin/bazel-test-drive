@@ -20,6 +20,7 @@
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" name="ktor-server-netty-jvm-2.0.3_429edfb5" level="project" />
     <orderEntry type="library" name="ktor-utils-jvm-2.0.3_c4a5a876" level="project" />
+    <orderEntry type="library" name="kotest-assertions-core-jvm-5.3.2_2ab085" level="project" />
     <orderEntry type="library" name="ktor-server-core-jvm-2.0.3_8795d6ae" level="project" />
     <orderEntry type="library" name="kotlinx-coroutines-core-jvm-1.6.4_ab3854b4" level="project" />
     <orderEntry type="library" name="junit-4.12_a45d20f2" level="project" />
