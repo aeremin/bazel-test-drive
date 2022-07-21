@@ -12,3 +12,12 @@ java_library(
         artifact("org.jetbrains.kotlinx:kotlinx-coroutines-core-jvm"),
     ],
 )
+
+java_library(
+    name = "kotest",
+    visibility = ["//visibility:public"],
+    exports = [
+        artifact("junit:junit"),
+        artifact("io.kotest:kotest-assertions-core-jvm"),
+    ],
+)

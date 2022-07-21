@@ -22,9 +22,8 @@ kt_jvm_test(
     ],
     test_class = "com.example.ExampleTest",
     deps = [
-        artifact("junit:junit"),
-        artifact("io.kotest:kotest-assertions-core-jvm"),
         ":greeter",
+        "//third_party:kotest",
     ],
 )
 

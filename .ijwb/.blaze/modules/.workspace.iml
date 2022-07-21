@@ -26,6 +26,7 @@
     <orderEntry type="library" name="junit-4.12_a45d20f2" level="project" />
     <orderEntry type="library" name="ktor-server-host-common-jvm-2.0.3_9cbca183" level="project" />
     <orderEntry type="library" name="libktor_ea1e96c3" level="project" />
+    <orderEntry type="library" name="libkotest_ea1e96c3" level="project" />
     <orderEntry type="library" name="ktor-http-jvm-2.0.3_cffee65" level="project" />
     <orderEntry type="library" name="server_kt__2d1a011" level="project" />
     <orderEntry type="library" name="example_kt__2d1a011" level="project" />
