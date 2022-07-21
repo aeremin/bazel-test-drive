@@ -8,8 +8,8 @@ import io.ktor.server.routing.*
 
 // Ways to run:
 // - Normal run: `bazel run //:server`
-// - Running the docker image: `sudo bazel run //:server_docker`
-//   TODO: Figure out how to run it without sudo
+// - Running the docker image: `bazel run //:server_docker` (for some reason exposing port not working with this?)
+// - Building docker image (bazel build //:server_docker) and running it separately (docker run -p 8081:8081 bazel:server_docker).
 //   TODO(https://github.com/bazelbuild/rules_docker/issues/1958): Make runnable under Windows (without WSL)
 fun main() {
     embeddedServer(Netty, port = 8081, host = "0.0.0.0") {
