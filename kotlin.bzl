@@ -16,6 +16,7 @@
 # a shell wrapper script for Java targets, no native executable as is required on Windows.
 # Based on https://github.com/CodeIntelligenceTesting/jazzer/blob/main/bazel/kotlin.bzl.
 
+load("@io_bazel_rules_docker//java:image.bzl", "java_image")
 load("@io_bazel_rules_kotlin//kotlin:jvm.bzl", _kt_jvm_binary = "kt_jvm_binary", _kt_jvm_test = "kt_jvm_test")
 
 def kt_jvm_binary(
@@ -36,6 +37,16 @@ def kt_jvm_binary(
 
     native.java_binary(
         name = name,
+        tags = tags,
+        main_class = main_class,
+        visibility = visibility,
+        runtime_deps = [
+            ":" + kt_jvm_binary_name,
+        ],
+    )
+
+    java_image(
+        name = name + "_docker",
         tags = tags,
         main_class = main_class,
         visibility = visibility,

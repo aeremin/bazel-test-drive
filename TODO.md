@@ -1,5 +1,5 @@
 # Things to do
 
-* Set up building a docker image for the server.
+* Fix the logging in the :server target (currently it says "SLF4J: Defaulting to no-operation (NOP) logger implementation")
 * Set up a deployment (e.g. to the Cloud Run).
 * Add "setting up everything from scratch" instruction
