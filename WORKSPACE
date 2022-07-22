@@ -50,6 +50,8 @@ maven_install(
         "io.ktor:ktor-utils-jvm:2.0.3",
         "junit:junit:4.12",
         "io.kotest:kotest-assertions-core-jvm:5.3.2",
+        "org.slf4j:slf4j-api:1.7.36",
+        "org.slf4j:slf4j-simple:1.7.36",
     ],
     repositories = [
         "https://maven.google.com",

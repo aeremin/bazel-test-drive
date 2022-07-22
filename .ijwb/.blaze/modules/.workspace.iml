@@ -18,15 +18,14 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="library" name="ktor-server-netty-jvm-2.0.3_429edfb5" level="project" />
     <orderEntry type="library" name="ktor-utils-jvm-2.0.3_c4a5a876" level="project" />
-    <orderEntry type="library" name="kotest-assertions-core-jvm-5.3.2_2ab085" level="project" />
     <orderEntry type="library" name="ktor-server-core-jvm-2.0.3_8795d6ae" level="project" />
     <orderEntry type="library" name="kotlinx-coroutines-core-jvm-1.6.4_ab3854b4" level="project" />
-    <orderEntry type="library" name="junit-4.12_a45d20f2" level="project" />
     <orderEntry type="library" name="ktor-server-host-common-jvm-2.0.3_9cbca183" level="project" />
+    <orderEntry type="library" name="slf4j-simple-1.7.36_328be40b" level="project" />
+    <orderEntry type="library" name="slf4j-api-1.7.36_a0d6ebcf" level="project" />
     <orderEntry type="library" name="libktor_ea1e96c3" level="project" />
-    <orderEntry type="library" name="libkotest_ea1e96c3" level="project" />
+    <orderEntry type="library" name="ktor-server-netty-jvm-2.0.3_429edfb5" level="project" />
     <orderEntry type="library" name="ktor-http-jvm-2.0.3_cffee65" level="project" />
     <orderEntry type="library" name="server_kt__2d1a011" level="project" />
     <orderEntry type="library" name="example_kt__2d1a011" level="project" />
