@@ -1,3 +1,10 @@
+# Prerequisite:
+#   GOOGLE_CREDENTIALS repository secret containing GCP service account json should be set up.
+#   Corresponding servince account requires following roles:
+#   - Artifact Registry Repository Administrator: to be able to upload docker images to Artifact Registry
+#   - Cloud Run developer: to be able to deploy a new revision to Cloud Run
+#   - Service Account User: to be able to deploy a new revision to Cloud Run (see https://stackoverflow.com/a/55788899)
+
 name: Build everything with Bazel
 
 on:
