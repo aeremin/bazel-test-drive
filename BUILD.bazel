@@ -47,6 +47,6 @@ java_image(
 docker_push(
     name = "push_server",
     image = ":server_docker",
-    registry = "eu.gcr.io",
+    registry = "europe-central2-docker.pkg.dev",
     repository = "alice-larp/bazel-test-drive/server",
 )
