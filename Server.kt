@@ -16,7 +16,7 @@ fun main() {
         log.info("Hello world!")
         routing {
             get("/") {
-                call.respondText("Hello World!")
+                call.respondText("Hello Cloud World!")
             }
         }
     }.start(wait = true)
