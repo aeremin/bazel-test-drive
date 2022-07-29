@@ -1,4 +1,5 @@
 load("//:kotlin.bzl", "kt_jvm_binary", "kt_jvm_test")
+load("@io_bazel_rules_kotlin//kotlin:jvm.bzl", "kt_jvm_library")
 load("@io_bazel_rules_docker//java:image.bzl", "java_image")
 load("@io_bazel_rules_docker//docker:docker.bzl", "docker_push")
 load("@rules_jvm_external//:defs.bzl", "artifact")
@@ -49,4 +50,22 @@ docker_push(
     image = ":server_docker",
     registry = "europe-central2-docker.pkg.dev",
     repository = "alice-larp/bazel-test-drive/server",
+)
+
+java_library(
+    name = "dependency_test",
+    srcs = ["DependencyTest.java"],
+    deps = [
+        artifact("org.slf4j:slf4j-api"),
+        artifact("org.slf4j:slf4j-simple"),
+    ],
+)
+
+kt_jvm_library(
+    name = "dependency_test_kotlin",
+    srcs = ["DependencyTestKotlin.kt"],
+    deps = [
+        artifact("org.slf4j:slf4j-api"),
+        artifact("org.slf4j:slf4j-simple"),
+    ],
 )
