@@ -1,0 +1,10 @@
+load("@rules_jvm_external//:defs.bzl", "artifact")
+
+java_library(
+    name = "dependency_test",
+    srcs = ["DependencyTest.java"],
+    deps = [
+        artifact("org.slf4j:slf4j-api"),
+        artifact("org.slf4j:slf4j-simple"),
+    ],
+)

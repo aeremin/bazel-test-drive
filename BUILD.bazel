@@ -52,15 +52,6 @@ docker_push(
     repository = "alice-larp/bazel-test-drive/server",
 )
 
-java_library(
-    name = "dependency_test",
-    srcs = ["DependencyTest.java"],
-    deps = [
-        artifact("org.slf4j:slf4j-api"),
-        artifact("org.slf4j:slf4j-simple"),
-    ],
-)
-
 kt_jvm_library(
     name = "dependency_test_kotlin",
     srcs = ["DependencyTestKotlin.kt"],
