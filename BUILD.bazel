@@ -3,6 +3,8 @@ load("@io_bazel_rules_kotlin//kotlin:jvm.bzl", "kt_jvm_library")
 load("@io_bazel_rules_docker//java:image.bzl", "java_image")
 load("@io_bazel_rules_docker//docker:docker.bzl", "docker_push")
 load("@rules_jvm_external//:defs.bzl", "artifact")
+load("@npm//@bazel/typescript:index.bzl", "ts_project")
+load("@build_bazel_rules_nodejs//:index.bzl", "nodejs_binary")
 
 java_library(
     name = "greeter",
@@ -61,12 +63,22 @@ kt_jvm_library(
     ],
 )
 
-load("@build_bazel_rules_nodejs//:index.bzl", "nodejs_binary")
+exports_files(["tsconfig.json"])
+
+ts_project(
+    name = "example_nodets",
+    srcs = [":example.ts"],
+    tsconfig = ":tsconfig.json",
+    deps = [
+        "@npm//@types/express",
+        "@npm//express",
+    ],
+)
 
 nodejs_binary(
     name = "example_nodejs",
     data = [
-        "@npm//express",
+        ":example_nodets",
     ],
     entry_point = "example.js",
 )
