@@ -60,3 +60,10 @@ kt_jvm_library(
         artifact("org.slf4j:slf4j-simple"),
     ],
 )
+
+load("@build_bazel_rules_nodejs//:index.bzl", "nodejs_binary")
+
+nodejs_binary(
+    name = "example_nodejs",
+    entry_point = "example.js",
+)

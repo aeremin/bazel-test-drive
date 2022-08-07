@@ -94,3 +94,21 @@ load(
 )
 
 java_image_repos()
+
+###############################################################################
+# rules_nodejs dependencies
+# See instruction at https://bazelbuild.github.io/rules_nodejs/install.html
+http_archive(
+    name = "build_bazel_rules_nodejs",
+    sha256 = "f10a3a12894fc3c9bf578ee5a5691769f6805c4be84359681a785a0c12e8d2b6",
+    urls = ["https://github.com/bazelbuild/rules_nodejs/releases/download/5.5.3/rules_nodejs-5.5.3.tar.gz"],
+)
+
+load("@build_bazel_rules_nodejs//:repositories.bzl", "build_bazel_rules_nodejs_dependencies")
+
+build_bazel_rules_nodejs_dependencies()
+
+# fetches nodejs, npm, and yarn
+load("@build_bazel_rules_nodejs//:index.bzl", "node_repositories")
+
+node_repositories()
