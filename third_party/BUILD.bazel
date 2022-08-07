@@ -8,10 +8,6 @@ java_library(
         artifact("io.ktor:ktor-server-core-jvm"),
         artifact("io.ktor:ktor-server-host-common-jvm"),
         artifact("io.ktor:ktor-http-jvm"),
-        artifact("io.ktor:ktor-utils-jvm"),
-        artifact("org.jetbrains.kotlinx:kotlinx-coroutines-core-jvm"),
-        artifact("org.slf4j:slf4j-api"),
-        artifact("org.slf4j:slf4j-simple"),
     ],
 )
 
