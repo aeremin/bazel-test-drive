@@ -4,10 +4,19 @@ load("@bazel_tools//tools/build_defs/repo:http.bzl", "http_archive")
 # rules_kotlin dependencies
 # See instruction at https://github.com/bazelbuild/rules_kotlin#quick-guide
 
+# Use local check-out of repo rules (or a commit-archive from github via http_archive or git_repository)
 http_archive(
+    name = "io_bazel_rules_kotlin_master",
+    strip_prefix = "rules_kotlin-master",
+    urls = ["https://github.com/aeremin/rules_kotlin/archive/refs/heads/master.zip"],
+    sha256 = "6ef7ed634bff1d4b0eb3cd7d96c7b0861429d2cc33fad4d1b078cab2e0d7b516"
+)
+
+load("@io_bazel_rules_kotlin_master//src/main/starlark/release_archive:repository.bzl", "archive_repository")
+
+archive_repository(
     name = "io_bazel_rules_kotlin",
-    sha256 = "a57591404423a52bd6b18ebba7979e8cd2243534736c5c94d35c89718ea38f94",
-    urls = ["https://github.com/bazelbuild/rules_kotlin/releases/download/v1.6.0/rules_kotlin_release.tgz"],
+    source_repository_name = "io_bazel_rules_kotlin_master",
 )
 
 load("@io_bazel_rules_kotlin//kotlin:repositories.bzl", "kotlin_repositories")
