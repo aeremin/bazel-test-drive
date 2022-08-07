@@ -27,6 +27,9 @@ load("@io_bazel_rules_kotlin//kotlin:core.bzl", "kt_register_toolchains")
 
 kt_register_toolchains()  # to use the default toolchain, otherwise see toolchains below
 
+###############################################################################
+# maven_install dependencies (to install external dependencies from maven repository)
+# See instruction at https://github.com/bazelbuild/rules_jvm_external#usage
 http_archive(
     name = "rules_jvm_external",
     sha256 = "cd1a77b7b02e8e008439ca76fd34f5b07aecb8c752961f9640dea15e9e5ba1ca",
@@ -34,9 +37,6 @@ http_archive(
     url = "https://github.com/bazelbuild/rules_jvm_external/archive/4.2.zip",
 )
 
-###############################################################################
-# maven_install dependencies (to install external dependencies from maven repository)
-# See instruction at https://github.com/bazelbuild/rules_jvm_external#usage
 load("@rules_jvm_external//:repositories.bzl", "rules_jvm_external_deps")
 
 rules_jvm_external_deps()
