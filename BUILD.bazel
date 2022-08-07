@@ -65,5 +65,8 @@ load("@build_bazel_rules_nodejs//:index.bzl", "nodejs_binary")
 
 nodejs_binary(
     name = "example_nodejs",
+    data = [
+        "@npm//express",
+    ],
     entry_point = "example.js",
 )

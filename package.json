@@ -1,0 +1,13 @@
+{
+  "name": "bazel-test-drive",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/aeremin/bazel-test-drive.git"
+  },
+  "scripts": {
+  },
+  "dependencies": {
+    "express": "4.18.1"
+  }
+}
