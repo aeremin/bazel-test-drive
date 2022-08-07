@@ -7,9 +7,9 @@ load("@bazel_tools//tools/build_defs/repo:http.bzl", "http_archive")
 # Use local check-out of repo rules (or a commit-archive from github via http_archive or git_repository)
 http_archive(
     name = "io_bazel_rules_kotlin_master",
+    sha256 = "6ef7ed634bff1d4b0eb3cd7d96c7b0861429d2cc33fad4d1b078cab2e0d7b516",
     strip_prefix = "rules_kotlin-master",
     urls = ["https://github.com/aeremin/rules_kotlin/archive/refs/heads/master.zip"],
-    sha256 = "6ef7ed634bff1d4b0eb3cd7d96c7b0861429d2cc33fad4d1b078cab2e0d7b516"
 )
 
 load("@io_bazel_rules_kotlin_master//src/main/starlark/release_archive:repository.bzl", "archive_repository")
